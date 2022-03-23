@@ -1,0 +1,63 @@
+<div style="background-color: beige;">
+<span >
+  <br>
+  <a class="text-success" (click)=add() >
+    <font style="border:rgb(255, 166, 0); border-width:10px; border-style:outset;">  
+      ADD AN EMPLOYEE </font> 
+  </a><br><br><br>
+  
+
+
+ 
+  <table >
+    <tr><th><label for="fname" >Firstname</label></th>
+      <th><label for="lastname">Lastname</label></th>
+      <th><label for="age">age</label></th></tr>
+  <tr><th>
+    <span><input type="text"  pInputText class="p-inputtext-sm" placeholder="First-Name" name="fname" pInputText [(ngModel)]="employee.firstname" >
+    
+  </span>
+  </th>
+  
+    <th>
+      <span ><input type="text"  pInputText class="p-inputtext-sm" placeholder="Last-Name" name="lastname" [(ngModel)]="employee.lastname" pInputText>
+      </span>
+    </th> 
+    <th>
+      <span >
+        <input type="text"  pInputText class="p-inputtext-sm" placeholder="Age" name="age" [(ngModel)]="employee.age" pInputText>
+       
+      </span>
+    </th> </tr>
+    <!-- <th><input type="text" name="id" [(ngModel)]="employee.id"></th></tr>  -->
+  </table>
+</span>
+  
+<hr>
+
+<span  class="table-add float-right mb-3 mr-2">
+  <br>
+  <a class="text-success" (click)=modify(employee.ffirstname,employee.llastname,employee.aage)>
+    <font style="border:rgb(255, 166, 0); border-width:10px; border-style:outset;">  
+      MODIFY AN EMPLOYEE </font> 
+  </a><br><br>
+  
+  <table>
+    <ul style="list-style-type:none;"><li><span for="fnameshow"><h3>Name: {{this.personlista.employees[this.employee.idx-1].firstname}}</h3></span></li>
+    <li><span for="lastnameshow"><h3>Last-Name: {{this.personlista.employees[this.employee.idx-1].lastname}}</h3></span></li>
+    <li><span for="ageshow"><h3>Age: {{this.personlista.employees[this.employee.idx-1].age}}</h3></span></li>
+    <li><span for="idshow"><h3>ID: {{this.personlista.employees[this.employee.idx-1].id}}</h3></span></li></ul>
+    <tr><th><label for="fname">Firstname</label></th>
+    <th><label for="lastname">Lastname</label></th>
+    <th><label for="age">age</label></th></tr>
+    <!-- <th><label for="id">id</label></th></tr>  -->
+     <tr><th><input type="text" pInputText class="p-inputtext-sm" placeholder="First-Name"  pInputText  name="name"  [(ngModel)]="employee.ffirstname"></th>
+    <th><input type="text" pInputText class="p-inputtext-sm" placeholder="Last-Name"  pInputText  name="lastname" [(ngModel)]="employee.llastname"></th> 
+    <th><input type="text" pInputText class="p-inputtext-sm" placeholder="Age"  pInputText  name="age" [(ngModel)]="employee.aage"></th>
+    </tr> 
+    
+  </table>
+</span>
+   </div>
+
+
